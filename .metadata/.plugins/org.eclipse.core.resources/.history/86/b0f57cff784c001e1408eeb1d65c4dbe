@@ -1,0 +1,8 @@
+package com.server.cloud.command;
+
+public class Authority {
+
+	
+	public enum 
+	ROLE_USER, ROLE_ADMIN
+}

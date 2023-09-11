@@ -1,0 +1,28 @@
+package com.server.cloud.admin.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.server.cloud.command.NoticeVO;
+
+@Service("adminSerivce")
+public class AdminServiceImpl implements AdminService{
+
+	@Autowired
+	AdminMapper adminMapper;
+	
+	
+	@Override
+	public int getTotal() {
+		// TODO Auto-generated method stub
+		return adminMapper.getTotal();
+	}
+
+
+	@Override
+	public NoticeVO getList(int currentPage)  {
+		adminMapper.getList(currentPage);
+		};
+	
+
+}

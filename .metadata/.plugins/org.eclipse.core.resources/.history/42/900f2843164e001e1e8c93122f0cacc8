@@ -1,0 +1,19 @@
+package com.server.cloud.admin.service;
+
+import com.server.cloud.command.NoticeVO;
+
+public interface AdminService {
+
+	int getTotal();
+
+	NoticeVO getList(int currentPage);
+	
+	
+		
+	
+	
+	
+	
+	
+	
+}

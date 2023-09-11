@@ -1,0 +1,13 @@
+package com.server.cloud.security;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class JWTService {
+	 @Value("${secret_key}")
+	 private String secret;
+	 
+	 
+	 
+	 
+	 
+}

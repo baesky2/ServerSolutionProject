@@ -1,0 +1,17 @@
+package com.server.cloud.security;
+import org.apache.ibatis.annotations.Mapper;
+
+import com.server.cloud.command.UserVO;
+
+
+@Mapper
+public interface UserMapper {
+
+	
+	//가입
+
+	public static UserVO login(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

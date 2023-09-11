@@ -1,0 +1,28 @@
+package com.server.cloud.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.server.cloud.command.UserVO;
+
+@Service
+public class MyUserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService{
+	@Autowired
+	private UserMapper userMapper;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		UserVO vo=userMapper.login(username);
+		
+		
+	    if (vo == null) {
+            throw new UsernameNotFoundException("User not found with username: " + username);
+        }else {
+        	System.out.println(vo.toString());
+        	return new MyUserDetails(vo);
+        }
+	}
+
+}

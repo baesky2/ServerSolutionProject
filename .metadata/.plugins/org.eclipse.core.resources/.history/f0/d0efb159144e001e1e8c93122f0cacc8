@@ -1,0 +1,5 @@
+package com.server.cloud.command;
+
+public class NoticeVO {
+
+}

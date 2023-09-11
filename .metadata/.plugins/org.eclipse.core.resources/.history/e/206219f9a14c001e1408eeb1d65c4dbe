@@ -1,0 +1,25 @@
+package com.server.cloud.security;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class SecurityService {
+
+	
+	private static final String SECRET_KEY="kdjasbdjklabsjdklbn";
+	
+	
+	
+	public String createToken(String subject,long expTime) {
+		
+		if(expTime<=0) {
+			throw new RuntimeException("만료 시간이 0보다 커야됨");
+		}
+		
+		
+		return null;
+		
+	}
+	
+	
+}

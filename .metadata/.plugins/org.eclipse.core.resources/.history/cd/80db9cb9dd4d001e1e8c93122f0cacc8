@@ -1,0 +1,5 @@
+package com.server.cloud.pagenation;
+
+public class pageVO {
+
+}

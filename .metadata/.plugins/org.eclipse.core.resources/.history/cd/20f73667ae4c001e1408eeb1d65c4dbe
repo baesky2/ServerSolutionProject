@@ -1,0 +1,23 @@
+package com.server.cloud.security;
+
+import com.server.cloud.command.UserVO;
+
+public class UserDetails {
+
+	
+	private UserVO userVO;
+	
+	
+	public UserDetails(UserVO vo) {
+		this.userVO = vo;
+	} 
+	
+	
+	//화면에서 권한도 쓰고싶으면 getter만들면됨
+		public String getRole() {
+			return userVO.getRole();
+	}
+	
+	
+	
+}

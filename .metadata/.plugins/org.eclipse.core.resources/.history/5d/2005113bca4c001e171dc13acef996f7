@@ -1,0 +1,20 @@
+package com.server.cloud.security;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MyApplication {
+
+    @Autowired
+    private MyService myService;
+
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+
+    public void someMethod() {
+        String secretKey = myService.getSecretKey();
+        // secretKey를 사용하여 작업 수행
+    }
+}

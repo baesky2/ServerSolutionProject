@@ -1,0 +1,14 @@
+package com.server.cloud.security;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyService {
+
+    @Value("${secret_key}")
+    private String secretKey;
+    public String getSecretKey() {
+        return secretKey;
+    }
+}

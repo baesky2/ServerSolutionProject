@@ -1,0 +1,16 @@
+package com.server.cloud.admin.service;
+
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.server.cloud.command.NoticeVO;
+
+@Mapper
+public interface AdminMapper {
+
+	int getTotal();
+
+	List<NoticeVO> getList(Map<String, Integer> page);
+
+}

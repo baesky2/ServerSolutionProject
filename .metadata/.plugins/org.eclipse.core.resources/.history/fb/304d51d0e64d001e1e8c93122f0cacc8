@@ -1,0 +1,5 @@
+package com.server.cloud.main.controller;
+
+public class PageNation {
+
+}
